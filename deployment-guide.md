@@ -11,6 +11,8 @@ When deploying to Render, make sure to set these environment variables in your R
 - `ALLOWED_HOSTS` = `.onrender.com,localhost,127.0.0.1`
 
 ### Optional Variables (if you use these features):
+**Note**: All these variables now have default values, so deployment will work without them. Set them only if you want to use these services:
+
 - `DATABASE_URL` = Your database connection string
 - `EMAIL_HOST` = SMTP server for sending emails
 - `EMAIL_PORT` = SMTP port (usually 587)
@@ -19,8 +21,14 @@ When deploying to Render, make sure to set these environment variables in your R
 - `EMAIL_USE_TLS` = `True`
 - `STRIPE_PUBLISHABLE_KEY` = Your Stripe publishable key
 - `STRIPE_SECRET_KEY` = Your Stripe secret key
+- `STRIPE_WEBHOOK_SECRET` = Your Stripe webhook secret
 - `TWILIO_ACCOUNT_SID` = Your Twilio SID
 - `TWILIO_AUTH_TOKEN` = Your Twilio auth token
+- `TWILIO_PHONE_NUMBER` = Your Twilio phone number
+- `BACKEND_DOMAIN` = Your backend domain (defaults to localhost:8000)
+- `FRONTEND_DOMAIN` = Your frontend domain (defaults to localhost:3000)
+- `CELERY_BROKER_URL` = Redis URL for Celery (defaults to localhost Redis)
+- `REDIS_BACKEND` = Redis URL for caching (defaults to localhost Redis)
 
 ## Files Created for Deployment:
 
@@ -29,6 +37,7 @@ When deploying to Render, make sure to set these environment variables in your R
 3. **Updated requirements.txt** - Compatible package versions
 4. **Updated development.py** - Development settings configured for Render deployment
 5. **Fixed celery.py** - Handles missing environment variables gracefully
+6. **Updated base.py** - Added default values for all environment variables (Twilio, Stripe, domains, etc.)
 
 ## Next Steps:
 
