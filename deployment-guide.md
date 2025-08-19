@@ -8,7 +8,7 @@ When deploying to Render, make sure to set these environment variables in your R
 - `DJANGO_SETTINGS_MODULE` = `config.settings.development`
 - `SECRET_KEY` = Generate a secure secret key (Render can auto-generate this)
 - `DEBUG` = `True` (since using development settings)
-- `ALLOWED_HOSTS` = Your render domain will be auto-added
+- `ALLOWED_HOSTS` = `.onrender.com,localhost,127.0.0.1`
 
 ### Optional Variables (if you use these features):
 - `DATABASE_URL` = Your database connection string
@@ -37,6 +37,7 @@ When deploying to Render, make sure to set these environment variables in your R
    - `DJANGO_SETTINGS_MODULE` = `config.settings.development`
    - `SECRET_KEY` = (let Render auto-generate this)
    - `DEBUG` = `True`
+   - `ALLOWED_HOSTS` = `.onrender.com,localhost,127.0.0.1`
 3. Deploy your application
 
 The deployment should now work without the previous errors!
