@@ -38,6 +38,7 @@ When deploying to Render, make sure to set these environment variables in your R
 4. **Updated development.py** - Development settings configured for Render deployment
 5. **Fixed celery.py** - Handles missing environment variables gracefully
 6. **Updated base.py** - Added default values for all environment variables (Twilio, Stripe, domains, etc.)
+7. **Fixed middleware** - Added required allauth.account.middleware.AccountMiddleware
 
 ## Next Steps:
 
